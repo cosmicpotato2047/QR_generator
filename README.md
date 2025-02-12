@@ -37,7 +37,9 @@ npx nodemon app.js
 ### 4️⃣ **웹 앱 접속**
 브라우저에서 http://localhost:3000에 접속하면 QR 코드 생성기를 사용할 수 있습니다.
 
-## 🛠 프로젝트 구조
+---
+
+## 🛠 **프로젝트 구조**
 ```plaintext
 qr-generator/
 │── screenshots/   # UI 스크린샵샵
@@ -46,32 +48,39 @@ qr-generator/
 │── package.json   # 프로젝트 정보 및 의존성
 │── README.md      # 프로젝트 설명
 ```
-## 🎨 UI 미리보기
+
+---
+
+## 🎨 **UI 미리보기**
 ![UI 미리보기](./screenshots/screenshot01.png)
 
-## 📡 API 사용법
-서버에서 QR 코드를 생성하는 API도 제공합니다.
+---
 
-## 📌 QR 코드 생성 API
-Endpoint: POST /generate
+## 📡 **API 사용법**
+서버에서 QR 코드를 생성하는 API를 제공합니다.
 
-Request Body
+### 📌 **QR 코드 생성 API**
+**Endpoint**: POST /generate
+
+**Request Body**
 ```json
 {
   "text": "https://example.com"
 }
 ```
-Response
+**Response**
 
-성공 시:
+- 성공 시:
 ```json
 {
   "qrCodeURL": "data:image/png;base64,..."
 }
 ```
-오류 발생 시:
+- 오류 발생 시:
 ```json
 {
   "error": "QR 코드 생성 중 오류가 발생했습니다."
 }
 ```
+
+---
